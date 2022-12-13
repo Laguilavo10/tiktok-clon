@@ -1,0 +1,55 @@
+.descripcion-container{
+  position: absolute;
+  bottom: 0;
+  width: 90%;
+  background-color: aqua;
+  padding: 10px 20px 10px 20px;
+  background-color: #e7e9ea0e;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.descripcion-container > p {
+  max-height: 70px;
+  word-break: break-all;
+  overflow: hidden;
+  text-overflow:ellipsis;
+}
+
+.sonido-container{
+  /* background-color: blanchedalmond; */
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  /* justify-content: r; */
+  flex-direction: row-reverse;
+  margin-top: 5px;
+}
+
+.sonido-container > div {
+  width: 40px;
+  height: 40px;
+  background-color: black;
+  border-radius: 50px;
+  animation: girar 4s infinite linear;
+  display: flex;
+  align-items: center;
+}
+
+.sonido-container > p{
+  white-space: nowrap;
+  width: 80%;
+  overflow: hidden;
+  text-overflow:ellipsis;
+}
+
+@keyframes girar {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

@@ -1,3 +1,40 @@
-/* ul{
-  z-index: 50;
-} */
+nav{
+  align-self: center;
+  z-index: 100;
+}
+
+.icons-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding-right: 5px;
+}
+
+.icons-container > li {
+  width: 25px;
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.icons-container > li:first-child {
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  border: 2px solid white;
+  background-color: black;
+}
+
+svg{
+  width: 100%;
+  height: 50%;
+}
+
+.me-gusta{
+  fill: red;
+}
