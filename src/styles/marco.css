@@ -1,0 +1,37 @@
+.video-container{
+  width: 100%;
+  max-width: 300px;
+  height: 100%;
+  position: relative;
+  /* padding: 20%; */
+}
+
+.video-container > img{
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 10;
+}
+
+.video-content{
+  height: 585px;
+
+  margin: 14px  16px;
+  position: relative;
+  overflow: hidden;
+}
+
+.video-content > img{
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -10;
+}
+
+@media (width < 300px) {
+  .video-container > img{
+    display: none;
+  }
+}
