@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import "../../styles/video.css";
 import marco from "../../assets/marcocelular.png";
 import { FaPlay, FaAngleDoubleDown } from "react-icons/fa";
@@ -8,6 +8,7 @@ export function Video({ children, infoVideo, indexVideo, setIndexVideo }) {
   const [isPaused, setIsPaused] = useState(true);
 
   const toggleVideo = () => {
+    debugger;
     if (videoRef.current.paused) {
       videoRef.current.play();
       setIsPaused(false);
@@ -23,6 +24,7 @@ export function Video({ children, infoVideo, indexVideo, setIndexVideo }) {
     } else {
       setIndexVideo((prev) => prev + 1);
     }
+    setIsPaused(false);
   };
 
   return (

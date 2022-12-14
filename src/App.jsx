@@ -17,12 +17,10 @@ function App() {
       .then((res) => res.json())
       .then((info) => {
         setInfoVideo(info.data);
-        console.log(info)
+
         setLoading(false);
       });
   }, []);
-
-  console.log(infoVideo)
   return (
     <>
 
