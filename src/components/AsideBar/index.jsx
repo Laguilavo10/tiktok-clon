@@ -4,12 +4,11 @@ import { BsFillHeartFill } from "react-icons/bs";
 import { FaComment, FaShare } from "react-icons/fa";
 import numeroRandom from "../../utilities/numeroRandom";
 
-let countLikes = numeroRandom(10)
-let countComment =numeroRandom(10)
-let countShares =numeroRandom(10)
-
-
-export function AsideBar() {
+export function AsideBar({infoVideo}) {
+  let video = infoVideo.data[0]
+  let countLikes =  video.stats.likes
+  let countComment = video.stats.comments
+  let countShares = video.stats.shares
 
   const [like, setLike] = useState(false)
   const likeOnClick = ()=>{
@@ -21,6 +20,7 @@ export function AsideBar() {
       <nav>
         <ul className="icons-container">
           <li>
+            <img src={video.author.avatar} alt="" className="avatar-user"/>
             <div>+</div>
           </li>
           <li>

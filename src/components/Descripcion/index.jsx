@@ -2,15 +2,17 @@ import React from "react";
 import "../../styles/descripcion.css";
 import {FaMusic} from 'react-icons/fa'
 
-export function Descripcion() {
+export function Descripcion({infoVideo}) {
+  let video = infoVideo.data[0]
+
   return (
     <>
       <div className="descripcion-container">
-        <h4>@random</h4>
-        <p>texto random</p>
+        <h4>@{video.author.username}</h4>
+        <p>{video.description}</p>
         <div className="sonido-container">
           <div><FaMusic></FaMusic></div>
-          <p>Musica que nose por quesssssssssssssssssssssssssssssssssssssss</p>
+          <p>{video.song.name}</p>
         </div>
       </div>
     </>
