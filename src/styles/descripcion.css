@@ -4,7 +4,7 @@
   width: 90%;
   background-color: aqua;
   padding: 10px 20px 10px 20px;
-  background-color: #e7e9ea0e;
+  background-color: #2e2f3070;
   display: flex;
   flex-direction: column;
   gap: 7px;
@@ -18,7 +18,6 @@
 }
 
 .sonido-container{
-  /* background-color: blanchedalmond; */
   width: 100%;
   display: flex;
   align-items: center;

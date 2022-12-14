@@ -2,16 +2,17 @@ import { useState } from "react";
 import "./index.css";
 // import { Video } from "./components/Video";
 import { AsideBar } from "./components/AsideBar";
-import { Marco } from "./components/Marco";
+import { Video } from "./components/Video";
 import { Descripcion } from "./components/Descripcion";
 
 function App() {
+
   return (
     <>
-      <Marco>
+      <Video>
         <AsideBar />
         <Descripcion></Descripcion>
-      </Marco>
+      </Video>
 
       {/* <Video></Video> */}
     </>

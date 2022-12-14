@@ -27,9 +27,9 @@
 
 .video-content > img{
   object-fit: cover;
-  width: 100%;
+  width: 90%;
   height: 100%;
-  /* position: absolute; */
+  position: absolute;
   z-index: -10;
 }
 

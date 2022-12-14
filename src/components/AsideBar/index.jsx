@@ -7,20 +7,24 @@ import numeroRandom from "../../utilities/numeroRandom";
 let countLikes = numeroRandom(10)
 let countComment =numeroRandom(10)
 let countShares =numeroRandom(10)
+
+
 export function AsideBar() {
 
   const [like, setLike] = useState(false)
-  
+  const likeOnClick = ()=>{
+    setLike(prev=>!prev)
+    !like ? countLikes+=1 : countLikes-=1
+  }
   return (
     <>
       <nav>
-        {/* <button onClick={(a)=>(console.log('sdasd'))}>sss</button> */}
         <ul className="icons-container">
           <li>
-            <div>s</div>
+            <div>+</div>
           </li>
           <li>
-            <BsFillHeartFill onClick={(a)=>(setLike(!like))} className={like && 'me-gusta'}/>
+            <BsFillHeartFill onClick={likeOnClick} className={like && 'me-gusta'}/>
             <span>{countLikes}</span>
           </li>
           <li>
