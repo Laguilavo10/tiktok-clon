@@ -8,7 +8,7 @@ export function Video({ children, infoVideo, indexVideo, setIndexVideo }) {
   const [isPaused, setIsPaused] = useState(true);
 
   const toggleVideo = () => {
-    debugger;
+
     if (videoRef.current.paused) {
       videoRef.current.play();
       setIsPaused(false);

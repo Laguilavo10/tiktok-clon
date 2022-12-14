@@ -9,6 +9,9 @@
   flex-direction: column;
   gap: 7px;
   z-index: 200;
+  /* border-radius: 20px; */
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
 
 .descripcion-container > p {
@@ -53,8 +56,9 @@
   }
 }
 
-@media (width < 400px) {
+@media (width < 425px) {
   .descripcion-container{
     width: 100%;
+    border-radius: 0;
   }
 }
