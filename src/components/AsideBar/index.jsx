@@ -5,7 +5,7 @@ import { FaComment, FaShare } from "react-icons/fa";
 import numeroRandom from "../../utilities/numeroRandom";
 
 export function AsideBar({infoVideo}) {
-  let video = infoVideo.data[0]
+  let video = infoVideo
   let countLikes =  video.stats.likes
   let countComment = video.stats.comments
   let countShares = video.stats.shares

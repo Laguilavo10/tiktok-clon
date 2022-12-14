@@ -3,7 +3,7 @@ import "../../styles/descripcion.css";
 import {FaMusic} from 'react-icons/fa'
 
 export function Descripcion({infoVideo}) {
-  let video = infoVideo.data[0]
+  let video = infoVideo
 
   return (
     <>

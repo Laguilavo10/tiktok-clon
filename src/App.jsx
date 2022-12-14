@@ -8,26 +8,29 @@ import { Descripcion } from "./components/Descripcion";
 function App() {
   const [loading, setLoading] = useState(true);
   const [infoVideo, setInfoVideo] = useState(null)
+  const [indexVideo, setIndexVideo] = useState(0)
+
+
   useEffect(() => {
     const API_URL = "https://apitk.crisvega.dev/api/videos";
     fetch(API_URL)
       .then((res) => res.json())
-      .then((data) => {
-        setInfoVideo(data);
+      .then((info) => {
+        setInfoVideo(info.data);
+        console.log(info)
         setLoading(false);
       });
   }, []);
 
-
-
+  console.log(infoVideo)
   return (
     <>
 
       {!loading && (<>
       
-        <Video infoVideo={infoVideo}>
-          <AsideBar infoVideo={infoVideo}/>
-          <Descripcion infoVideo={infoVideo}/>
+        <Video infoVideo={infoVideo[indexVideo]} indexVideo={indexVideo} setIndexVideo={setIndexVideo}>
+          <AsideBar infoVideo={infoVideo[indexVideo]}/>
+          <Descripcion infoVideo={infoVideo[indexVideo]}/>
         </Video>
       
       </>
