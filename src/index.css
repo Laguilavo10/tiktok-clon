@@ -15,7 +15,9 @@ body{
 li{
   list-style: none;
 }
-
+body{
+  overflow-x: hidden;
+}
 #root{
   display: flex;
   height: 100vh;
